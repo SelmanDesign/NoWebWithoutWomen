@@ -1,4 +1,4 @@
-mixin inventionblock(title, body)
+mixin inventionblock(title, name, body)
   .titlecard
     .expand
       h3.expansion +
@@ -6,4 +6,5 @@ mixin inventionblock(title, body)
     .invention
       h3.invention=title
     .infocard
+      h2.name=name
       p.infoparagraph=body
