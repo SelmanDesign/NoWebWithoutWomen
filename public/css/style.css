@@ -83,3 +83,7 @@ h3.invention {
 h3.expansion {
   text-align: right;
 }
+
+.showcard {
+  display: block;
+}

@@ -5,8 +5,11 @@ const init = function(){
       var rand = back[Math.floor(Math.random() * back.length)];
       items[i].style.background = rand;
     }
-
-    cssScrollSnapPolyfill()
 }
+
+$(".titlecard").click(function(){
+  $(this).children(':nth-child(4)').toggleClass("showcard");
+  console.log("hello");
+});
 
 init();
