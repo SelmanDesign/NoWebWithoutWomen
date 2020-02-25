@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   line-height: normal;
-  font-family: 'Rubik', sans-serif;
+  font-family: monospace;
 }
 
 body {
@@ -13,763 +13,73 @@ body {
 }
 
 html {
-  background: #FEFEFE;
-}
-
-
-@font-face {
-  font-family: 'William_Caslon';
-  src: url(../fonts/WilliamsCaslonText-Regular.woff);
-}
-
-@font-face {
-  font-family: 'Nocturno';
-  src: url(../fonts/NocturnoDisplayPro-Regular.woff);
-}
-
-@font-face {
-  font-family: 'CSTMX';
-  src: url(../fonts/CSTMXprmntl03_Medium.woff);
+  background: #fff;
+  color: #000;
 }
 
 /*navbar*/
 
 .navbar {
+  width: 100%;
+  padding: 6px 12px 6px 12px;
+  background: #03FF4A;
   position: fixed;
-  padding: 15px;
-  padding-left: 17.5px;
-  width: 80px;
-  z-index: 5;
-
-}
-
-.navbar:hover {
-  filter: hue-rotate(90deg);
-}
-
-
-
-.vesselimg {
-  width: 100px;
-}
-
-
-/*mobile first styling*/
-
-a {
-  color: #2E4DBA;
-  text-decoration: none;
-  font-family: 'William_Caslon', serif;
-}
-
-canvas {
-  position: relative;
-  z-index: -3 !important;
-}
-
-#about {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
   top: 0;
-  left: 0;
-  /*filter: blur(2px);*/
-  z-index: 3;
-  pointer-events: none;
-
 }
 
-#bannertop {
-  background: #000000;
-  color: white;
+h3.logotype {
+  text-decoration: line-through;
 }
 
-.contentwidth {
-  width: 90%;
-  margin: auto;
+/*grid*/
+
+.bodygrid {
+  margin-top: 50px;
 }
 
-#bannerhold {
-  display: inline-flex;
-}
-
-#bannercomp {
-  height: 100vh;
-}
-
-#bannervetalign {
-  margin: auto;
-}
-
-#namecall {
-  font-family: 'William_Caslon', serif;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  margin-bottom: 1.6rem;
-}
-
-#headlinehold {
-  display: inline-flex;
-}
-
-.headline {
-  font-family: 'Nocturno', serif;
-  font-size: 13vw;
-  line-height: 20vw;
-}
-
-#twoheadline {
-  display: flex;
-  align-items: center;
-}
-
-#call {
-  font-family: 'CSTMX', serif;
-  font-size: 13vw;
-  margin: auto;
-}
-
-#deffintion>div {
-  font-family: 'William_Caslon', serif;
-  margin-bottom: 1rem;
-}
-
-#deffintion {
-  width: 30vw;
-  padding-left: 2vw;
-  display: block;
-}
-
-#wordkind {
-  font-size: 0.8rem;
-}
-
-#pronounce {
-  font-family: sans-serif;
-  font-style: italic;
-}
-
-.defbox {
-  display: inline-flex;
-}
-
-.defbox>div {
-  font-family: 'William_Caslon', serif;
-}
-
-.defsubnum {
-  padding-right: 0.5rem;
-}
-
-.button {
-  font-family: 'Nocturno', serif;
-  font-size: 1.2em;
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 30px;
-  width: 230px;
-  height: 3.4rem;
-  align-self: center;
-}
-
-.bggrad {
+ul.gridsnap {
   width: 100%;
-  height: 3.4rem;
-  border-radius: 30px;
+  padding: 0;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(3rem);
+  scroll-snap-type: y mandatory;
 }
 
-.bttntxt {
-  position: relative;
-  top: -2.4rem;
-}
-
-.button:hover .bggrad {
-  background: linear-gradient(114.02deg, #78C0BB -15.02%, #A27E6E 62.75%, #5C9371 96.41%);
-  filter: blur(10px);
-}
-
-.button:hover{
-  border: none;
-}
-
-#scrollbox {
-  display: none;
-}
-
-#downpic {
-  width: 30px;
-}
-
-#mousepic {
-  width: 30px;
-  margin: auto;
-  padding-bottom: 0.8rem;
-}
-
-#mouseword {
-  text-align: center;
-  font-family: 'William_Caslon', serif;
-  width: 100%;
-}
-
-#aboutme {
-  width: 90%;
-  margin: auto;
-}
-
-#thanks {
-  display: block;
-}
-
-.titling {
-  font-family: 'Nocturno', serif;
-  font-size: 1.5em;
-  margin-top: 0.4rem;
-  color: #ffffff;
-}
-
-.body {
-  font-family: 'William_Caslon', serif;
-  line-height: 1.8em;
-  color: #ffffff;
-}
-
-.btitling {
-  font-family: 'Nocturno', serif;
-  font-size: 1.5em;
-  color: #000000;
-}
-
-.bbody {
-  font-family: 'William_Caslon', serif;
-  line-height: 1.8em;
-  color: #000000;
-}
-
-/*project box*/
-
-#contentbg {
-  background: #000000;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
-
-.contentbox {
-  background: none;
-  border-left: 1px solid #ffffff;
-  margin-bottom: 2.5vw;
-  margin-top: 5vw;
-  max-width: 500px;
-  padding-left: 0.6rem;
-}
-
-.faturedimg {
-  margin: 0.6rem;
-}
-
-.featdim{
-  border-radius: 1rem;
-  width: 100%;
-}
-
-.projectinfo {
-  display: flex;
-  align-items: baseline;
-}
-
-.aboutproject {
-  padding: 0.6rem 1rem 0rem 1rem;
-  font-family: 'William_Caslon', serif;
-}
-
-.rolesbox {
-  display: inline-grid;
-  grid-template-columns: 60px auto;
-}
-
-.rolesbox>div {
-  font-family: 'William_Caslon', serif;
-  vertical-align: text-top;
-}
-
-.roles {
-  color: #ffffff;
-}
-
-.rolelist {
-  text-transform: uppercase;
-  font-size: 12px;
-  vertical-align:text-bottom;
-  padding-top: 0.2rem;
-  padding-left: 0.4rem;
-  color: #C2C2C2;
-}
-
-.projectnotes {
-  padding-bottom: 0.6rem;
-}
-
-.projectnotes>div {
-  display: inline-flex;
-  font-family: 'William_Caslon', serif;
-}
-
-.projicon {
-  height: 0.8rem;
-  margin-right: 0.2rem;
-  width: auto;
-}
-
-.projectdesc {
-  margin: 0.6rem 0rem 0.6rem 1rem;
-  color: black;
-}
-
-.site {
-  margin-right: 0.6rem;
-}
-
-.sitelink {
-  color: #85ABA2;
-}
-
-.team {
-  margin-right: 0.8rem;
-}
-
-.caselink {
-  margin: auto;
-  text-align: center;
-  width: 95%;
-  border-radius: 2rem;
-  border: 1px solid #ffffff;
-  height: 3rem;
-}
-
-.caselink:hover {
-  border: none;
-}
-
-.caselink:hover .casegrad {
-  background: linear-gradient(132.04deg, #78C0BB -15.02%, #A27E6E 62.75%, #5C9371 96.41%);
-  filter: blur(10px);
-}
-
-.casegrad {
-  width: 100%;
-  height: 3rem;
-  border-radius: 2rem;
-}
-
-.casetxt {
-  position: relative;
-  top: -2.1rem;
-}
-
-.casea {
-  color: #ffffff;
-  font-family: sans-serif;
-}
-
-.greybox {
-
-}
-
-.greybox>div {
-  font-family: 'William_Caslon', serif;
-  color: #ffffff;
-}
-
-.linkcall {
-  display: flex;
-  padding-left: 0.6rem;
-  align-items: center;
-}
-
-/*footer*/
-
-.footer {
-  background: black;
-  color: white;
-  padding-bottom: 15vh;
-}
-
-.foothold {
-  padding: 0.6rem;
-
-}
-
-.foothold>p {
-  font-family: 'William_Caslon', serif;
-  font-size: 0.8rem;
-}
-
-#combine {
-  width: 100%;
-}
-
-#composing {
-  width: 100%;
-}
-
-/*footer*/
-
-.footerbox {
-  background-color: #000000;
-  font-family: 'William_Caslon', serif;
-  color: white;
-  font-size: 0.8rem;
-}
-
-.footerhold {
-  width: 95%;
-  margin: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.footergrid {
-  width: 100%;
-  display: inline-grid;
-  grid-template-columns: auto 200px;
-}
-
-.footerl {
-
-}
-
-.footerr {
-  text-align: right;
-  border-left: 1px solid white;
-}
-
-.foottext {
-  font-family: 'William_Caslon', serif;
-}
-
-.decentralized {
-  margin-bottom: 2rem;
-}
-
-#days {
-  font-family: 'CSTMX', serif;
-  color: #ffffff;
-  font-size: 2.6rem;
-}
-
-.social {
-  display: flex;
-  align-content: center;
-  justify-content: flex-end;
-  margin-bottom: 0;
-}
-
-.social>svg {
-  margin: 0.6rem;
-}
-
-.try {
-  margin-top: -10px;
-}
-
-.helplist {
+li.cardhold {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
 }
 
-#headshot {
-  margin-top: -123px;
-  margin-left: 15px;
-  z-index: 2;
-  position: absolute;
+/*cards*/
+
+.titlecard {
+  width: 100%;
+  padding: 6px 12px 6px 12px;
+  border-top: 1px solid red;
+  scroll-snap-align: start;
 }
 
-#headhello {
-  width: 60px;
+
+
+h3 {
+  color: red;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: 100;
 }
 
-#deffintion {
+.infocard {
   display: none;
 }
 
-.abouthold {
-  display: inline-flex;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+h3.invention {
+  text-decoration: line-through;
 }
 
-flame {
-  display: none;
-}
-
-/*mobile footer*/
-
-.mobilebox {
-  background: #000000;
-  color: #ffffff;
-  margin-bottom: 0;
-}
-
-.mobilerowa {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.mobilefootcon {
-  width: 90%;
-  margin: auto;
-}
-
-.mobilerowb {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid#ffffff;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-#daymobile {
-  font-family: 'CSTMX', serif;
-  color: #ffffff;
-  font-size: 2.6rem;
-  text-align: center;
-}
-
-.mobilerowc {
-  padding-bottom: 4rem;
-}
-
-mobilefooter {
-  display: block;
-}
-
-#navimg {
-  width: 45px;
-}
-
-.iconbip {
-  width: 70px;
-}
-
-#crucible {
-  width: 50px;
-}
-
-.bottomhold {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.twostones {
-  padding-right: 0.6rem;
-}
-
-.thankyouhold {
-  display: flex;
-}
-
-.thankscol {
-  margin-right: 6rem;
-}
-
-#productshot {
-  position: absolute;
-  margin-top: -5vw;
-  margin-left: 56vw;
-}
-
-#hiproduct {
-  width: 85px;
-}
-
-.headlineone {
-  display: block;
-  align-items: baseline;
-}
-
-#globalgif {
-  width: 70px;
-}
-
-.picpad {
-  padding-left: 0.6vw;
-  padding-right: 0.6vw;
-}
-
-#footerlink {
-  color: #ffffff;
-}
-
-.hiddenhold {
-  display: flex;
-  align-items: baseline;
-}
-
-.littlepad {
-  padding: 0.6rem;
-}
-
-/*desktop*/
-
-@media only screen and (min-width: 1000px) {
-
-  #namecall {
-    font-size: 1.2rem;
-  }
-
-  .headline {
-    font-size: 10vw;
-    line-height: 8vw;
-  }
-
-  #call {
-    font-size: 10vw;
-  }
-
-  .bottomheadline {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .linebase {
-    border-bottom: 1px solid white;
-    width: 15%;
-    flex-shrink: 1;
-  }
-
-  #headhello {
-    width: 6vw;
-  }
-
-  #smallline {
-    border-bottom: 1px solid white;
-    flex-shrink: 1;
-    width: 8%;
-  }
-
-  .variablehold {
-    display: grid;
-    grid-template-columns: 45% auto;
-  }
-
-  #holdeleft {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    height: 100vh;
-    display: block;
-    top: 0px;
-    margin: 0
-  }
-
-  .abouthor {
-    display: block;
-    width: 70%;
-    margin: auto;
-    padding-left: 5%;
-  }
-
-  .abouthold {
-    display: inline-flex;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  .aboutheight {
-    height: 100vh;
-  }
-
-  .aboutme {
-    width: 100%;
-    margin: auto;
-  }
-
-  .contentbox {
-    margin: auto;
-    margin-bottom: 2.5vw;
-    margin-top: 5vw;
-  }
-
-  #contentbg {
-
-  }
-
-  .contentwidth {
-
-  }
-
-  #aboutgrid {
-    display: inline-flex;
-  }
-
-  .halfmast {
-    width: 100%;
-  }
-
-  #headshot {
-    z-index: 2;
-    position: absolute;
-    margin-top: -7vw;
-    margin-left: 10vw;
-  }
-
-  #headhello {
-    width: 100px;
-  }
-
-  #scrollbox {
-    display: block;
-    width: 100px;
-    align-self: center;
-  }
-
-  flame {
-    display: block;
-  }
-
-  .social {
-    display: flex;
-    align-content: center;
-    justify-content: flex-end;
-    margin-bottom: 10rem;
-  }
-
-  .decentralized {
-    margin-bottom: 6rem;
-  }
-
-  mobilefooter {
-    display: none;
-  }
-
-  #composing {
-    width: 50vw;
-  }
-
-  #deffintion {
-    width: 30vw;
-    padding-left: 2vw;
-    display: none;
-  }
-
-  #hiproduct {
-    width: 140px;
-  }
-
-  .headlineone {
-    display: flex;
-    align-items: baseline;
-  }
-
-  #globalgif {
-    width: 10vw;
-  }
-
-  .pushright {
-    padding-right: 2vw;
-  }
-
+h3.expansion {
+  text-align: right;
 }
