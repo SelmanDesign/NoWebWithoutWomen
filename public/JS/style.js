@@ -9,7 +9,7 @@ const init = function(){
 
 $(".titlecard").click(function(){
   $(this).children(':nth-child(4)').toggleClass("showcard");
-  console.log("hello");
+  $(this).children(':nth-child(1)').toggleClass("rota");
 });
 
 init();

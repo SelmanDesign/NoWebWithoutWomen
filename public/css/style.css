@@ -63,8 +63,6 @@ li.cardhold {
   scroll-snap-align: start;
 }
 
-
-
 h3 {
   color: red;
   font-size: 16px;
@@ -74,6 +72,11 @@ h3 {
 
 .infocard {
   display: none;
+}
+
+.expand {
+  width: 16px;
+  float: right;
 }
 
 h3.invention {
@@ -86,4 +89,8 @@ h3.expansion {
 
 .showcard {
   display: block;
+}
+
+.rota {
+  transform: rotate(45deg);
 }
