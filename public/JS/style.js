@@ -10,6 +10,34 @@ const init = function(){
 $(".titlecard").click(function(){
   $(this).children(':nth-child(4)').toggleClass("showcard");
   $(this).children(':nth-child(1)').toggleClass("rota");
+  $(this).children(':nth-child(3)').children().toggleClass("name");
 });
+
+$("#base").click(function(){
+  $('h2').css("font-family","base-9-sans");
+  $('h2').css("font-weight","200");
+  $('.infoparagraph').css("font-family","base-12-serif");
+  $('.infoparagraph').css("font-size","14px");
+  $('.infoparagraph').css("line-height","150%");
+});
+
+$("#co").click(function(){
+  $('h2').css("font-family","cofosandsreg");
+  $('.infoparagraph').css("font-family","cofosandsreg")
+});
+
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if($(window).scrollTop() > 0) {
+      $('.headl').addClass('small');
+      $('.bodygrid').css("margin-top","120px");
+    } else {
+      $('.headl').removeClass('small');
+      $('.bodygrid').css("margin-top","230px");
+      console.log("hello world");
+    }
+  });
+});
+
 
 init();

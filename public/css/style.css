@@ -1,9 +1,16 @@
-/*housekeeping*/
+/*fonts*/
+
+@font-face {
+  font-family: 'cofosandsreg';
+  src: url(../fonts/CoFo_Sans_LaModa-Regular.woff)
+}
+
+/*universals*/
 
 * {
   box-sizing: border-box;
   line-height: normal;
-  font-family: monospace;
+  font-family: 'cofosandsreg';
 }
 
 body {
@@ -17,6 +24,10 @@ html {
   color: #000;
 }
 
+.defaulp{
+  width: 100%;
+  padding: 6px 12px 6px 12px;
+}
 /*navbar*/
 
 .navbar {
@@ -34,7 +45,8 @@ h3.logotype {
 /*grid*/
 
 .bodygrid {
-  margin-top: 50px;
+  margin-top: 230px;
+  transition: 0.3s;
 }
 
 ul.gridsnap {
@@ -54,20 +66,44 @@ li.cardhold {
   scroll-snap-align: start;
 }
 
+/*headline*/
+
+.headl {
+  margin: 0;
+  padding: 0;
+  font-size: 12vw;
+  transition: 0.3s;
+}
+
+.small {
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#item0 {
+  text-decoration: line-through;
+}
+
 /*cards*/
 
 .titlecard {
   width: 100%;
-  padding: 6px 12px 6px 12px;
-  border-top: 1px solid red;
+  padding: 24px 12px 24px 12px;
   scroll-snap-align: start;
 }
 
 h3 {
-  color: red;
+  color: #000;
   font-size: 16px;
-  font-family: monospace;
+  text-transform: uppercase;
+  font-family: 'cofosandsreg';
   font-weight: 100;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .infocard {
@@ -75,16 +111,33 @@ h3 {
 }
 
 .expand {
-  width: 16px;
+  width: 10px;
+  height: 10px;
   float: right;
+  margin: 0;
+  padding: 0;
+  line-height: 0px;
+  transition: 0.3s;
 }
 
-h3.invention {
+.invention {
   text-decoration: line-through;
+  font-size: 24px;
+  transition: 0.3s;
 }
 
 h3.expansion {
   text-align: right;
+  margin: 0;
+  padding: 0;
+  line-height: 8px;
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  font-size: 12vw;
+  transition: font-size 0.3s;
 }
 
 .showcard {
@@ -93,4 +146,14 @@ h3.expansion {
 
 .rota {
   transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+/*button*/
+
+.button {
+  border-radius: 30px;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 12px;
 }
