@@ -1,7 +1,7 @@
 {
-  "name": "simple-node-website",
+  "name": "No-Web-Without-Women",
   "version": "0.1.0",
-  "description": "Portfolio Page",
+  "description": "A Information Site Exploring the Role of Women in the creation of the Web",
   "main": "server.js",
   "scripts": {
     "start": "npx nodemon app.js"
@@ -10,7 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "jquery": "^3.4.1",
     "pug": "^2.0.3",
     "serve-favicon": "^2.5.0",
     "ssl-express-www": "^3.0.6"
