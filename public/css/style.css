@@ -10,7 +10,6 @@
 * {
   box-sizing: border-box;
   line-height: normal;
-  font-family: 'cofosandsreg';
 }
 
 body {
@@ -33,9 +32,20 @@ html {
 .navbar {
   width: 100%;
   padding: 6px 12px 6px 12px;
-  background: #03FF4A;
+  background: #fff;
   position: fixed;
   top: 0;
+  display: flex;
+}
+
+.heightcomp {
+  height: 80vh;
+  transition: 0.3s;
+}
+
+.headlinehold {
+  margin: auto;
+  transition: 0.3s;
 }
 
 h3.logotype {
@@ -45,7 +55,7 @@ h3.logotype {
 /*grid*/
 
 .bodygrid {
-  margin-top: 230px;
+  margin-top: 81vh;
   transition: 0.3s;
 }
 
@@ -80,7 +90,7 @@ li.cardhold {
   transition: 0.3s;
 }
 
-#item0 {
+.strikethrough {
   text-decoration: line-through;
 }
 
@@ -96,14 +106,30 @@ h3 {
   color: #000;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'cofosandsreg';
-  font-weight: 100;
+  font-family: "base-9-sans";
+  font-weight: 200;
 }
 
 h2 {
   text-transform: uppercase;
+  font-family: "base-9-sans";
+  font-weight: 200;
   margin: 0;
   padding: 0;
+}
+
+.nono {
+  font-size: 0px;
+  transition: 0.3s;
+  margin-right: 24px;
+}
+
+.noname {
+  margin: 0;
+  padding: 0;
+  font-size: 12vw;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 .infocard {
@@ -111,8 +137,8 @@ h2 {
 }
 
 .expand {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   float: right;
   margin: 0;
   padding: 0;
@@ -124,20 +150,26 @@ h2 {
   text-decoration: line-through;
   font-size: 24px;
   transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h3.expansion {
   text-align: right;
   margin: 0;
   padding: 0;
-  line-height: 8px;
+  line-height: 12px;
+  font-family: "base-9-sans";
+  font-size: 24px;
 }
 
 .name {
+  display: block;
   margin: 0;
   padding: 0;
   font-size: 12vw;
-  transition: font-size 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 .showcard {
@@ -147,6 +179,12 @@ h3.expansion {
 .rota {
   transform: rotate(45deg);
   transition: 0.3s;
+}
+
+.infoparagraph {
+  font-family: "base-12-serif";
+  font-size: 16px;
+  line-height: 150%;
 }
 
 /*button*/
