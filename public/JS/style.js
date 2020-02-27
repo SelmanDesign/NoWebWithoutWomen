@@ -19,12 +19,42 @@ const init = function(){
     }
 }
 
+/*
 $(".titlecard").click(function(){
   var title = $(this).children(':nth-child(4)');
   var ex = $(this).children(':nth-child(1)');
   var name = $(this).children(':nth-child(3)').children()
   var core = $('.infocard');
-  if(title.hasClass('showcard')) {
+  $('.infocard').removeClass("showcard");
+  $('.expand').removeClass("rota");
+  $('.invention').removeClass("name");
+  title.toggleClass("showcard");
+  ex.toggleClass("rota");
+  name.toggleClass("name");
+});
+*/
+
+$(".invention").click(function(){
+  var title = $(this).siblings(".infocard");
+  var ex = $(this).siblings(".expand");
+  var name = $(this).children();
+  var core = $('.infocard');
+  $('.infocard').removeClass("showcard");
+  $('.expand').removeClass("rota");
+  $('.invention').removeClass("name");
+  title.toggleClass("showcard");
+  ex.toggleClass("rota");
+  name.toggleClass("name");
+});
+
+
+
+$(".expand").click(function(){
+  var title = $(this).siblings(".infocard");
+  var ex = $(this);
+  var name = $(this).siblings(".invention").children()
+  var core = $('.infocard');
+  if($(this).hasClass("rota")) {
     $('.infocard').removeClass("showcard");
     $('.expand').removeClass("rota");
     $('.invention').removeClass("name");
@@ -35,8 +65,21 @@ $(".titlecard").click(function(){
     title.toggleClass("showcard");
     ex.toggleClass("rota");
     name.toggleClass("name");
+    console.log("hello world");
   }
 });
+
+
+/*
+
+use this for mouse over
+
+if(title.hasClass("shocard")){
+  title.css("cursor","pointer")
+}else{
+  title.css("cursor","default")
+}
+*/
 
 $(document).ready(function() {
   $(window).scroll(function() {

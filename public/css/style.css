@@ -1,10 +1,5 @@
 /*fonts*/
 
-@font-face {
-  font-family: 'cofosandsreg';
-  src: url(../fonts/CoFo_Sans_LaModa-Regular.woff)
-}
-
 /*universals*/
 
 * {
@@ -150,7 +145,9 @@ h2 {
   transition: 0.3s;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 }
+
 
 h3.expansion {
   text-align: right;
@@ -159,6 +156,7 @@ h3.expansion {
   line-height: 12px;
   font-family: "base-9-sans";
   font-size: 24px;
+  cursor: pointer;
 }
 
 .name {
@@ -168,10 +166,12 @@ h3.expansion {
   font-size: 12vw;
   transition: 0.3s;
   text-decoration: none;
+  cursor: default;
 }
 
 .showcard {
   display: block;
+  cursor: default;
 }
 
 .rota {
@@ -185,11 +185,73 @@ h3.expansion {
   line-height: 150%;
 }
 
+.infocardchild {
+  display: block;
+}
+
+.infoparahold {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .infocardchild {
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-column-gap: 12px;
+  }
+
+}
+
 /*button*/
 
 .button {
-  border-radius: 30px;
-  border: 1px solid black;
+  border: 3px solid black;
   text-align: center;
   margin-top: 12px;
+  max-width: 300px;
+  background: #fff;
+  height: 60px;
+}
+
+.button:hover {
+  box-shadow: -2px 2px 0px #000000;
+  cursor: pointer;
+}
+
+/*footer*/
+
+.trigrid {
+  display: block;
+  width: 100%;
+  padding: 6px 12px 60px 12px;
+  font-family: "base-12-serif";
+}
+
+.trigrid>div {
+  padding-bottom: 36px;
+}
+
+.trigridchildhold {
+  width: 100%;
+  max-width: 400px;
+}
+
+.social {
+  text-align: left;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .trigrid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 12px;
+  }
+
+  .social {
+    text-align: right;
+  }
+
 }
