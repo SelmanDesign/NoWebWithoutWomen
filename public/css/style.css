@@ -94,6 +94,10 @@ li.cardhold {
   text-decoration: line-through;
 }
 
+#item0 {
+  text-decoration: line-through;
+}
+
 /*cards*/
 
 .titlecard {
@@ -116,12 +120,6 @@ h2 {
   font-weight: 200;
   margin: 0;
   padding: 0;
-}
-
-.nono {
-  font-size: 0px;
-  transition: 0.3s;
-  margin-right: 24px;
 }
 
 .noname {
