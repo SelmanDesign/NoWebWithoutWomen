@@ -19,52 +19,74 @@ const init = function(){
 }
 
 $(".invention").click(function(){
-  var title = $(this).siblings(".infocard");
-  var ex = $(this).siblings(".expand");
+  var title = $(this).siblings(".infoexpansion");
+  var ex = $(this).parent().parent().parent().siblings(".expand");
   var name = $(this).children();
-  var core = $('.infocard');
-  $('.infocard').removeClass("showcard");
+  var pic = $(this).parent().siblings(".inforight");
+  var core = $('.infoexpansion');
+  $('.infoexpansion').removeClass("showcard");
   $('.expand').removeClass("rota");
   $('.invention').removeClass("name");
+  $('.inforight').removeClass("inforightshow");
   title.toggleClass("showcard");
   ex.toggleClass("rota");
   name.toggleClass("name");
+  pic.toggleClass("inforightshow");
 });
 
 $(".expand").click(function(){
-  var title = $(this).siblings(".infocard");
+  var title = $(this).siblings(".infocard").children(".infobridge").children(".infoleft").children(".infoexpansion");
   var ex = $(this);
-  var name = $(this).siblings(".invention").children()
-  var core = $('.infocard');
+  var name = $(this).siblings(".infocard").children(".infobridge").children(".infoleft").children(".invention").children();
+  var pic = $(this).siblings(".infocard").children(".infobridge").children(".inforight");
+  var core = $('.infoexpansion');
   if($(this).hasClass("rota")) {
-    $('.infocard').removeClass("showcard");
+    $('.infoexpansion').removeClass("showcard");
     $('.expand').removeClass("rota");
     $('.invention').removeClass("name");
+    $('.inforight').removeClass("inforightshow");
   } else {
-    $('.infocard').removeClass("showcard");
+    $('.infoexpansion').removeClass("showcard");
     $('.expand').removeClass("rota");
     $('.invention').removeClass("name");
+    $('.inforight').removeClass("inforightshow");
     title.toggleClass("showcard");
     ex.toggleClass("rota");
     name.toggleClass("name");
-    console.log("hello world");
+    pic.toggleClass("inforightshow");
   }
 });
 
 $(document).ready(function() {
   $(window).scroll(function() {
     if($(window).scrollTop() > 30) {
+      $('#one').removeClass("onean");
       $('.headl').addClass('small');
       $('.bodygrid').css("margin-top","30vh");
       $('.heightcomp').css("height","auto");
       $('.defaulp').css("display","none");
       $('.headlinehold').css("margin","0");
+      $('#one').html("w");
+      $('#one').addClass("onean");
+      $('#two').html("w");
+      $('#two').addClass("twoan");
+      $('#three').html("w");
+      $('#three').addClass("threean");
+      $('.collapse').css("display","none");
     } else {
+      $('#one').removeClass("onean");
       $('.headl').removeClass('small');
       $('.heightcomp').css("height","80vh");
       $('.bodygrid').css("margin-top","81vh");
       $('.defaulp').css("display","block");
       $('.headlinehold').css("margin","auto");
+      $('#one').html("w");
+      $('#one').addClass("onean");
+      $('#two').html("e");
+      $('#two').addClass("twoan");
+      $('#three').html("b");
+      $('#three').addClass("threean");
+      $('.collapse').css("display","block");
     }
   });
 });

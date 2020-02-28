@@ -3,14 +3,27 @@ mixin inventionblock(title, name, body)
     .expand
       h3.expansion +
     .spacer
-    .invention
-      h2.invention
-        =title
     .infocard
-      h2.name Without
-      h2.name=name
-      .infocardchild
-        .infoparahold
-          p.infoparagraph=body
-        .button
-          p.infoparagraph CTA FPO
+      .infobridge
+        .infoleft
+          .invention
+            h2.invention
+              =title
+          .infoexpansion
+            h2.name Without
+            h2.name
+              =name
+            .infocardchild
+              .infoparahold
+                p.infoparagraph=body
+        .inforight
+          .imghold
+            img.featimg(src="/images/Telephone_Operators.png")
+          .caption
+            p.captiontxt 
+              | Lorem ipsum dolor sit amet consect eteur adipscing elit eres nonum esect apiscing eres ecto.
+              br
+              br
+              | Photo: Credit Name,
+              br
+              | circa 1954

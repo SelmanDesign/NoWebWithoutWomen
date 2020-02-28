@@ -77,12 +77,10 @@ li.cardhold {
   margin: 0;
   padding: 0;
   font-size: 12vw;
-  transition: 0.3s;
 }
 
 .small {
-  font-size: 16px;
-  transition: 0.3s;
+  font-size: 24px;
 }
 
 .strikethrough {
@@ -91,6 +89,26 @@ li.cardhold {
 
 #item0 {
   text-decoration: line-through;
+  transition: 0.2s;
+}
+
+#one #two #three {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.onean {
+  opacity: 1;
+}
+
+.twoan {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.threean {
+  opacity: 1;
+  transition-delay: 0.4s;
 }
 
 /*cards*/
@@ -128,6 +146,14 @@ h2 {
 }
 
 .infocard {
+
+}
+
+.infoexpansion {
+  display: none;
+}
+
+.inforight {
   display: none;
 }
 
@@ -196,6 +222,19 @@ h3.expansion {
   max-width: 800px;
 }
 
+.featimg {
+  width: 100%;
+}
+
+.captiontxt {
+  font-family: "base-12-serif";
+  font-size: 16px;
+}
+
+.inforightshow {
+  display: block;
+}
+
 @media only screen and (min-width: 1000px) {
 
   .name {
@@ -208,10 +247,24 @@ h3.expansion {
     cursor: default;
   }
 
+  .infoparagraph  {
+    font-size: 24px;
+  }
+
   .infocardchild {
+    display: block;
+  }
+
+  .infobridge {
     display: grid;
-    grid-template-columns: auto 300px;
-    grid-column-gap: 12px;
+    grid-template-columns: 42.5% 42.5% 10%;
+    grid-column-gap: 5%;
+  }
+
+  .inforightshow {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-column-gap: 5vh;
   }
 
 }
