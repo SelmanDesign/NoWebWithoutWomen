@@ -42,6 +42,8 @@ html {
 .headlinehold {
   margin: auto;
   transition: 0.3s;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 h3.logotype {
@@ -87,9 +89,14 @@ li.cardhold {
   text-decoration: line-through;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 #item0 {
   text-decoration: line-through;
-  transition: 0.2s;
+  font-weight: 500;
 }
 
 #one #two #three {
@@ -97,18 +104,13 @@ li.cardhold {
   transition: opacity 0.2s;
 }
 
-.onean {
-  opacity: 1;
-}
-
-.twoan {
-  opacity: 1;
-  transition-delay: 0.2s;
-}
-
-.threean {
-  opacity: 1;
-  transition-delay: 0.4s;
+.animater {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15rem solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  padding-right: 0.4rem;/* Gives that scrolling effect as the typing happens */
+  letter-spacing: -0.1; /* Adjust as needed */
+  animation: typing 0.4s steps(3, end);
 }
 
 /*cards*/
