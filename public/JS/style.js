@@ -105,22 +105,21 @@ function midnav() {
 /*Calls navbar functions on scroll*/
 
 
-$(window).scroll(function() {
-  var zip = $(window).scrollTop(),
-      wS =$(this).scrollTop(),
-      hH = $('.navbar').outerHeight(),
-      wD = (hH+wS);
-  if (wS >= 0 && wS < 400)  {
-    expandednav();
-    $(".bodygrid").css("margin-top",wD);
-  } else if (wS > 401 && wS < 800 ) {
-    midnav();
-    $(".bodygrid").css("margin-top",wD);
-  } else {
-    smallnav();
-    $(".bodygrid").css("margin-top","800px");
-  }
-    console.log(wS);
+$(window).ready(function() {
+  $(window).scroll(function() {
+    var zip = $(window).scrollTop(),
+        wS =$(this).scrollTop(),
+        hH = $('.navbar').outerHeight(),
+        wD = (hH+wS);
+    if (wS >= 0 && wS < 200)  {
+      expandednav();
+      $(".bodygrid").css("margin-top",wD);
+    } else {
+      smallnav();
+      $(".bodygrid").css("margin-top","400px");
+    }
+      console.log(wS);
+  });
 });
 
 
