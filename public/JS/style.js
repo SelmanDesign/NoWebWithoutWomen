@@ -58,7 +58,7 @@ $(".expand").click(function(){
 });
 
 function expandednav() {
-  $('#item0').toggleClass('animater');
+  $('#item0').removeClass('animater');
   $('#one').addClass("onean");
   $('.headl').removeClass('small');
   $('.heightcomp').css("height","80vh");
@@ -86,7 +86,7 @@ function smallnav() {
 
 $(document).ready(function() {
   $(window).scroll(function() {
-    if($(window).scrollTop() > 30) {
+    if($(window).scrollTop() >= 30) {
       smallnav();
     } else {
       expandednav();
