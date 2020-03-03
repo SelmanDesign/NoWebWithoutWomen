@@ -19,7 +19,8 @@ html {
 }
 
 .defaulp{
-  width: 100%;
+  width: 80%;
+  max-width: 600px;
   padding: 6px 12px 6px 12px;
 }
 /*navbar*/
@@ -30,20 +31,19 @@ html {
   background: #fff;
   position: fixed;
   top: 0;
-  display: flex;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.heightcomp {
-  height: 80vh;
-  transition: 0.3s;
+  z-index: 5 !important;
 }
 
 .headlinehold {
   margin: auto;
+  margin-left: 22.5vw;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
   transition: 0.3s;
   padding-top: 12px;
   padding-bottom: 12px;
+  width: 55vw;
 }
 
 h3.logotype {
@@ -55,7 +55,6 @@ h3.logotype {
 .bodygrid {
   margin-top: 81vh;
   transition: 0.3s;
-
 }
 
 .snapbox {
@@ -76,9 +75,9 @@ li.cardhold {
 /*headline*/
 
 .headl {
-  margin: 0;
-  padding: 0;
   font-size: 12vw;
+  line-height: 80%;
+  font-weight: 800;
 }
 
 .small {
@@ -106,16 +105,59 @@ li.cardhold {
 }
 
 #item0 {
-  text-decoration: line-through;
-  font-weight: 500;
+  font-weight: 800;
 }
 
-#one #two #three {
-  opacity: 0;
-  transition: opacity 0.2s;
+#one {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#two {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#three {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#one::after {
+  border-bottom: 0.125em solid black;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+#two::after {
+  border-bottom: 0.125em solid black;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+#three::after {
+  border-bottom: 0.125em solid black;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 .animater {
+  width: auto;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: none; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -181,14 +223,29 @@ h2 {
 }
 
 .invention {
-  text-decoration: line-through;
   font-size: 24px;
   transition: 0.3s;
-  display: flex;
-  flex-wrap: wrap;
   cursor: pointer;
 }
 
+.strike {
+  font-size: 2em;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  letter-spacing: -0.05em;
+}
+
+.strike::after {
+  border-bottom: 0.125em solid black;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
 
 h3.expansion {
   text-align: right;
@@ -201,9 +258,6 @@ h3.expansion {
 }
 
 .name {
-  display: block;
-  margin: 0;
-  padding: 0;
   font-size: 36px;
   transition: 0.3s;
   text-decoration: none;
@@ -248,10 +302,12 @@ h3.expansion {
   display: block;
 }
 
+.infoleft {
+}
+
 @media only screen and (min-width: 1000px) {
 
   .name {
-    display: block;
     margin: 0;
     padding: 0;
     font-size: 72px;

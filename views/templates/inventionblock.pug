@@ -1,4 +1,4 @@
-mixin inventionblock(title, name, body)
+mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture)
   .titlecard
     .expand
       h3.expansion +
@@ -8,17 +8,23 @@ mixin inventionblock(title, name, body)
         .infoleft
           .invention
             h2.invention
-              =title
+              span.strike=titlea
+              span.strike=titleb
+              span.strike=titlec
           .infoexpansion
             h2.name Without
             h2.name
               =name
             .infocardchild
               .infoparahold
-                p.infoparagraph=body
+                p.infoparagraph
+                  =body
+                  br
+                  br
+                  =bodyb    
         .inforight
           .imghold
-            img.featimg(src="/images/Telephone_Operators.png")
+            img.featimg(src=picture)
           .caption
             p.captiontxt 
               | Lorem ipsum dolor sit amet consect eteur adipscing elit eres nonum esect apiscing eres ecto.

@@ -1,8 +1,8 @@
 {
   "name": "No-Web-Without-Women",
   "version": "0.1.0",
-  "description": "A Information Site Exploring the Role of Women in the creation of the Web",
-  "main": "server.js",
+  "description": "An nnformative site exploring the crucial role of women in the creation of the Web",
+  "main": "app.js",
   "scripts": {
     "start": "npx nodemon app.js"
   },
