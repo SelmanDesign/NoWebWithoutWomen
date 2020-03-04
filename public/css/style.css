@@ -46,11 +46,11 @@ html {
 
 #toppar {
   font-family: "Base-9-sans", sans-serif;
-  font-size: 2em;
+  font-size: 24px;
 }
 
 .holdspace {
-    width: 55vw;
+    width: 40vw;
 }
 
 h3.logotype {
@@ -63,9 +63,17 @@ h3.logotype {
   margin-top: 81vh;
   transition: 0.3s;
   margin-top: 81vh;
+  scroll-snap-type: y mandatory;
+  &.proximity {
+            scroll-snap-type: y proximity;
+          }
 }
 
 .snapbox {
+  scroll-snap-type: y mandatory;
+  &.proximity {
+            scroll-snap-type: y proximity;
+          }
 }
 
 ul.gridsnap {
@@ -83,13 +91,13 @@ li.cardhold {
 /*headline*/
 
 .headl {
-  font-size: 12vw;
+  font-size: 8vw;
   line-height: 80%;
   font-weight: 800;
 }
 
 .small {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .strikethrough {
@@ -99,7 +107,7 @@ li.cardhold {
 @keyframes typing {
   0% {
     width: 0;
-    border-right: .15rem solid orange;
+    border-right: .25rem solid orange;
   }
 
   60% {
@@ -221,7 +229,7 @@ h2 {
 }
 
 .expand {
-  width: 16px;
+  width: 48px;
   height: 16px;
   float: right;
   margin: 0;
@@ -231,13 +239,13 @@ h2 {
 }
 
 .invention {
-  font-size: 24px;
+  font-size: 2rem;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .strike {
-  font-size: 2em;
+  font-size: 40px;
   position: relative;
   margin: 0;
   padding: 0;
@@ -261,15 +269,14 @@ h3.expansion {
   padding: 0;
   line-height: 12px;
   font-family: "base-9-sans";
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
 }
 
 .name {
-  font-size: 36px;
-  transition: 0.3s;
-  text-decoration: none;
   cursor: default;
+  font-size: 40px;
+  line-height: 120%;
 }
 
 .showcard {
@@ -285,11 +292,13 @@ h3.expansion {
 .infoparagraph {
   font-family: "base-12-serif";
   font-size: 16px;
-  line-height: 150%;
+  line-height: 140%;
+  padding: 0;
+  margin: 0;
 }
 
 .infocardchild {
-  display: block;
+  display: none;
 }
 
 .infoparahold {
@@ -317,33 +326,18 @@ h3.expansion {
 
 @media only screen and (min-width: 1000px) {
 
-  .name {
-    margin: 0;
-    padding: 0;
-    font-size: 72px;
-    transition: 0.3s;
-    text-decoration: none;
-    cursor: default;
-  }
-
   .infoparagraph  {
-    font-size: 18px;
-  }
-
-  .infocardchild {
-    display: block;
+    font-size: 17px;
   }
 
   .infobridge {
     display: grid;
-    grid-template-columns: 42.5% 42.5% 10%;
+    grid-template-columns: 27% 27% 22% 10%;
     grid-column-gap: 5%;
   }
 
   .inforightshow {
-    display: grid;
-    grid-template-columns: 66% 33%;
-    grid-column-gap: 5vh;
+
   }
 
 }
@@ -370,7 +364,7 @@ h3.expansion {
   display: block;
   width: 100%;
   padding: 24px 5% 60px 5%;
-  font-family: "base-12-serif";
+  font-family: "base-9-sans";
 }
 
 .trigrid>div {

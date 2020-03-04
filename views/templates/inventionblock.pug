@@ -15,21 +15,22 @@ mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture)
             h2.name Without
             h2.name
               =name
-            .infocardchild
-              .infoparahold
-                p.infoparagraph
-                  =body
-                  br
-                  br
-                  =bodyb    
+        .infocardchild
+          .infoparahold
+            p.infoparagraph
+              =body
+              br
+              br
+              =bodyb    
         .inforight
           .imghold
             img.featimg(src=picture)
           .caption
             p.captiontxt 
               | Lorem ipsum dolor sit amet consect eteur adipscing elit eres nonum esect apiscing eres ecto.
-              br
-              br
-              | Photo: Credit Name,
-              br
-              | circa 1954
+              //
+                br
+                br
+                | Photo: Credit Name,
+                br
+                | circa 1954
