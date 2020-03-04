@@ -74,7 +74,10 @@ function expandednav() {
   $('.headl').removeClass('small');
   $('.heightcomp').css("height","80vh");
   $('.defaulp').css("display","block");
-  $('.headlinehold').css("margin","auto");
+  $('.headlinehold').css("margin-left","17.5vw");
+  $('.headlinehold').css("margin-top","5vh");
+  $('.headlinehold').css("margin-bottom","5vh");
+  $('.holdspace').css("width","55vw");
   $('#one').html("w");
   $('#two').html("e");
   $('#three').html("b");
@@ -86,41 +89,47 @@ function smallnav() {
   $('#item0').addClass('animater');
   $('.bodygrid').css("margin-top","100px");
   $('.defaulp').css("display","none");
-  $('.headlinehold').css("margin","0");
+  $('.headlinehold').css("margin-left","0");
+  $('.headlinehold').css("margin-top","12px");
+  $('.headlinehold').css("margin-bottom","12px");
+  $('.holdspace').css("width","70px");
   $('#one').html("w");
   $('#two').html("w");
   $('#three').html("w");
   $('.collapse').css("display","none");
-}
-
-function midnav() {
-  $('#item0').addClass('animater');
-  $('.collapse').css("display","none");
-  $('.defaulp').css("display","none");
-  $('#one').html("w");
-  $('#two').html("w");
-  $('#three').html("w");
 }
 
 /*Calls navbar functions on scroll*/
 
-
-$(window).ready(function() {
-  $(window).scroll(function() {
-    var zip = $(window).scrollTop(),
-        wS =$(this).scrollTop(),
-        hH = $('.navbar').outerHeight(),
-        wD = (hH+wS);
-    if (wS >= 0 && wS < 200)  {
-      expandednav();
-      $(".bodygrid").css("margin-top",wD);
-    } else {
-      smallnav();
-      $(".bodygrid").css("margin-top","400px");
-    }
-      console.log(wS);
-  });
+$(document).ready(function() {
+  var zip = $(window).scrollTop(),
+      wS =$(this).scrollTop(),
+      hH = $('.navbar').outerHeight(),
+      wD = (hH+wS);
+  if (wS <= 100)  {
+    expandednav();
+    $(".bodygrid").css("margin-top",wD);
+  } else {
+    smallnav();
+    $(".bodygrid").css("margin-top","400px");
+  }
 });
+
+
+$(window).scroll(function() {
+  var zip = $(window).scrollTop(),
+      wS =$(this).scrollTop(),
+      hH = $('.navbar').outerHeight(),
+      wD = (hH+wS);
+  if (wS <= 100)  {
+    expandednav();
+    $(".bodygrid").css("margin-top",wD);
+  } else {
+    smallnav();
+    $(".bodygrid").css("margin-top","200px");
+  }
+});
+
 
 
 init();
