@@ -19,8 +19,8 @@ html {
 }
 
 .defaulp{
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px;
   padding: 6px 12px 6px 12px;
 }
 /*navbar*/
@@ -36,12 +36,16 @@ html {
 }
 
 .headlinehold {
-  margin-left: 17.5vw;
+  margin-left: 0;
   margin-top: 5vh;
   margin-bottom: 5vh;
   transition: 0.3s;
   padding-top: 12px;
-  padding-bottom: 12px;;
+  padding-bottom: 12px;
+}
+
+.headlinemargin {
+  margin-left: 17.5vw;
 }
 
 #toppar {
@@ -59,10 +63,16 @@ h3.logotype {
 
 /*grid*/
 
+#topguy {
+  height: 90px;
+  background: none;
+  opacity: 0;
+}
+
 .bodygrid {
-  margin-top: 81vh;
   transition: 0.3s;
-  margin-top: 81vh;
+  margin-top: 90px;
+  position: relative;
   scroll-snap-type: y mandatory;
   &.proximity {
             scroll-snap-type: y proximity;
@@ -74,6 +84,19 @@ h3.logotype {
   &.proximity {
             scroll-snap-type: y proximity;
           }
+}
+
+.noscroll {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.stickify {
+  position: sticky;
+}
+
+.scrollhide {
+  display: none;
 }
 
 ul.gridsnap {
@@ -92,7 +115,6 @@ li.cardhold {
 
 .headl {
   font-size: 8vw;
-  line-height: 80%;
   font-weight: 800;
 }
 
@@ -180,6 +202,26 @@ li.cardhold {
   padding-right: 0.4rem;/* Gives that scrolling effect as the typing happens */
   letter-spacing: -0.1; /* Adjust as needed */
   animation: typing 0.6s steps(3, end);
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .headl {
+    font-size: 60px;
+  }
+
+  .small {
+    font-size: 30px;
+  }
+
+  .headlinemargin {
+    margin-left: 0;
+  }
+
+  #toppar {
+    font-size: 18px;
+  }
+
 }
 
 /*cards*/

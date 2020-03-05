@@ -12,7 +12,7 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //index
 app.get('/', (req, res) => {
   res.render('pages/index', {
-    title: 'No Web Without Woment'
+    title: 'No Web Without Women'
   });
 });
 

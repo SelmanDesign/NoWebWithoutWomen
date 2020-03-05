@@ -112,9 +112,12 @@ $(".cardhold").click(function(){
   pic.toggleClass("inforightshow");
   fullspan.toggleClass("fullspan");
   wiki.toggleClass("incondisp");
-  $('html, body').animate({
-        scrollTop: $(box).offset().top
-    }, 200);
+  smallnav();
+  setTimeout(function() {
+    $('html, body').animate({
+          scrollTop: $(box).offset().top
+      }, 200);
+  }, 350);
 });
 
 
@@ -129,7 +132,7 @@ function expandednav() {
   $('.headl').removeClass('small');
   $('.heightcomp').css("height","80vh");
   $('.defaulp').css("display","block");
-  $('.headlinehold').css("margin-left","25vw");
+  $('.headlinehold').addClass('headlinemargin');
   $('.headlinehold').css("margin-top","5vh");
   $('.headlinehold').css("margin-bottom","5vh");
   $('.holdspace').css("width","40vw");
@@ -144,7 +147,7 @@ function smallnav() {
   $('#item0').addClass('animater');
   $('.bodygrid').css("margin-top","100px");
   $('.defaulp').css("display","none");
-  $('.headlinehold').css("margin-left","0");
+  $('.headlinehold').removeClass('headlinemargin');
   $('.headlinehold').css("margin-top","12px");
   $('.headlinehold').css("margin-bottom","12px");
   $('.holdspace').css("width","90px");
@@ -160,30 +163,42 @@ $(document).ready(function() {
   var zip = $(window).scrollTop(),
       wS =$(this).scrollTop(),
       hH = $('.navbar').outerHeight(),
-      wD = (hH+wS);
-  if (wS <= 100)  {
+      wD = (hH+wS-90);
+  if (wS <= 1)  {
     expandednav();
-    $(".bodygrid").css("margin-top",wD);
+    $(".bodygrid").removeClass('noscroll');
+    $(".bodygrid").removeClass('stickify');
+    $(".bodygrid").css("margin-top", wD);
   } else {
     smallnav();
-    $(".bodygrid").css("margin-top","400px");
   }
 });
 
 
 $(window).scroll(function() {
   var zip = $(window).scrollTop(),
-      wS =$(this).scrollTop(),
+      wS = $(this).scrollTop(),
       hH = $('.navbar').outerHeight(),
-      wD = (hH+wS);
-  if (wS <= 100)  {
+      wD = (hH+wS+90);
+  if (wS <= 1) {
     expandednav();
-    $(".bodygrid").css("margin-top",wD);
+    $(".bodygrid").removeClass('noscroll');
+    $(".bodygrid").removeClass('stickify');
+    setTimeout(function() {
+      hHH = $('.navbar').outerHeight()
+      hHM = hHH-90;
+      $(".bodygrid").css("margin-top", hHM);
+      console.log(hHH);
+    }, 500);
   } else {
     smallnav();
-    $(".bodygrid").css("margin-top","400px");
+    $(".bodygrid").removeClass('noscroll');
+    $(".bodygrid").addClass('stickify');
+    $("footer").removeClass('scrollhide');
   }
 });
+
+
 
 
 
