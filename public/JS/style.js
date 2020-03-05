@@ -62,9 +62,13 @@ $(".expand").click(function(){
     par.toggleClass("inforightshow");
     fullspan.toggleClass("fullspan");
     wiki.toggleClass("incondisp");
-    $('html, body').animate({
-          scrollTop: $(box).offset().top
-      }, 200);
+    setTimeout(function() {
+      var hH = $('.navbar').outerHeight(),
+          hHm = hH+10
+      $('html, body').animate({
+            scrollTop: $(ex).offset().top-hHm
+        }, 200);
+    }, 350);
   }
 });
 
@@ -114,8 +118,10 @@ $(".cardhold").click(function(){
   wiki.toggleClass("incondisp");
   smallnav();
   setTimeout(function() {
+    var hH = $('.navbar').outerHeight(),
+        hHm = hH+10
     $('html, body').animate({
-          scrollTop: $(box).offset().top
+          scrollTop: $(ex).offset().top-hHm
       }, 200);
   }, 350);
 });
@@ -163,7 +169,7 @@ $(document).ready(function() {
   var zip = $(window).scrollTop(),
       wS =$(this).scrollTop(),
       hH = $('.navbar').outerHeight(),
-      wD = (hH+wS-90);
+      wD = (hH+wS);
   if (wS <= 1)  {
     expandednav();
     $(".bodygrid").removeClass('noscroll');
@@ -179,17 +185,17 @@ $(window).scroll(function() {
   var zip = $(window).scrollTop(),
       wS = $(this).scrollTop(),
       hH = $('.navbar').outerHeight(),
-      wD = (hH+wS+90);
+      wD = (hH+wS);
   if (wS <= 1) {
     expandednav();
     $(".bodygrid").removeClass('noscroll');
     $(".bodygrid").removeClass('stickify');
     setTimeout(function() {
       hHH = $('.navbar').outerHeight()
-      hHM = hHH-90;
+      hHM = hHH;
       $(".bodygrid").css("margin-top", hHM);
       console.log(hHH);
-    }, 500);
+    }, 300);
   } else {
     smallnav();
     $(".bodygrid").removeClass('noscroll');
