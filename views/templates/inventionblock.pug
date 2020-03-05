@@ -1,4 +1,4 @@
-mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture)
+mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture, link)
   .titlecard
     .expand
       h3.expansion +
@@ -34,3 +34,7 @@ mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture)
                 | Photo: Credit Name,
                 br
                 | circa 1954
+    .iconcol
+      .iconhold
+        a(href=link)
+          img.linkout(src="../images/48930.png")

@@ -324,16 +324,41 @@ h3.expansion {
 .infoleft {
 }
 
+.fullspan {
+
+}
+
+.iconcol {
+  display: none;
+}
+
+.incondisp {
+  display: block;
+  float: right;
+}
+
+.linkout {
+  width: 40px;
+}
+
 @media only screen and (min-width: 1000px) {
 
   .infoparagraph  {
     font-size: 17px;
   }
 
-  .infobridge {
+  .incondisp {
+    margin-top: -50px;
+  }
+
+  .fullspan {
     display: grid;
     grid-template-columns: 27% 27% 22% 10%;
     grid-column-gap: 5%;
+  }
+
+  .infobridge {
+
   }
 
   .inforightshow {

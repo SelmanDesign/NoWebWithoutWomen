@@ -34,6 +34,8 @@ $(".expand").click(function(){
   var name = $(this).siblings(".infocard").children(".infobridge").children(".infoleft").children(".invention").children().children(".strike");
   var pic = $(this).siblings(".infocard").children(".infobridge").children(".inforight");
   var par = $(this).siblings(".infocard").children(".infobridge").children(".infocardchild");
+  var fullspan = $(this).siblings(".infocard").children(".infobridge");
+  var wiki = $(this).siblings(".iconcol");
   var core = $('.infoexpansion');
   var box = $(this).parent().parent().prev();
   event.stopPropagation();
@@ -43,17 +45,23 @@ $(".expand").click(function(){
     $('.strike').removeClass("name");
     $('.inforight').removeClass("inforightshow");
     $('.infocardchild').removeClass("inforightshow");
+    $('.infobridge').removeClass("fullspan");
+    $('.iconcol').removeClass("incondisp");
   } else {
     $('.infoexpansion').removeClass("showcard");
     $('.expand').removeClass("rota");
     $('.strike').removeClass("name");
     $('.inforight').removeClass("inforightshow");
     $('.infocardchild').removeClass("inforightshow");
+    $('.infobridge').removeClass("fullspan");
+    $('.iconcol').removeClass("incondisp");
     title.toggleClass("showcard");
     ex.toggleClass("rota");
     name.toggleClass("name");
     pic.toggleClass("inforightshow");
     par.toggleClass("inforightshow");
+    fullspan.toggleClass("fullspan");
+    wiki.toggleClass("incondisp");
     $('html, body').animate({
           scrollTop: $(box).offset().top
       }, 200);
@@ -86,18 +94,24 @@ $(".cardhold").click(function(){
   var name = $(this).children(".titlecard").children(".infocard").children(".infobridge").children(".infoleft").children("invention").children(".invention").children(".strike");
   var pic = $(this).children(".titlecard").children(".infocard").children(".infobridge").children(".inforight");
   var par = $(this).children(".titlecard").children(".infocard").children(".infobridge").children(".infocardchild");
+  var fullspan = $(this).children(".titlecard").children(".infocard").children(".infobridge")
   var core = $('.infoexpansion');
+  var wiki = $(this).children(".titlecard").children(".iconcol");
   var box = $(this).prev();
   $('.infoexpansion').removeClass("showcard");
   $('.expand').removeClass("rota");
   $('.strike').removeClass("name");
   $('.infocardchild').removeClass("inforightshow");
   $('.inforight').removeClass("inforightshow");
+  $('.infobridge').removeClass("fullspan");
+  $('.iconcol').removeClass("incondisp");
   title.toggleClass("showcard");
   ex.toggleClass("rota");
   name.toggleClass("name");
   par.toggleClass("inforightshow");
   pic.toggleClass("inforightshow");
+  fullspan.toggleClass("fullspan");
+  wiki.toggleClass("incondisp");
   $('html, body').animate({
         scrollTop: $(box).offset().top
     }, 200);
