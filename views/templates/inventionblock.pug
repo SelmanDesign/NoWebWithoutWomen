@@ -1,4 +1,4 @@
-mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture, link)
+mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture, caption, link)
   .titlecard
     .expand
       h3.expansion +
@@ -27,14 +27,8 @@ mixin inventionblock(titlea, titleb, titlec, name, body, bodyb, picture, link)
             img.featimg(src=picture)
           .caption
             p.captiontxt 
-              | Lorem ipsum dolor sit amet consect eteur adipscing elit eres nonum esect apiscing eres ecto.
-              //
-                br
-                br
-                | Photo: Credit Name,
-                br
-                | circa 1954
+              =caption
     .iconcol
       .iconhold
-        a(href=link)
+        a(href=link target="_blank")
           img.linkout(src="../images/wikipedia-4096-black.png")

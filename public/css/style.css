@@ -244,14 +244,14 @@ h3 {
   color: #000;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: "base-9-sans";
+  font-family: "base-9-sans", sans-serif;
   font-weight: 200;
   letter-spacing: -0.2rem;
 }
 
 h2 {
   text-transform: uppercase;
-  font-family: "base-9-sans";
+  font-family: "base-9-sans", sans-serif;
   font-weight: 200;
   margin: 0;
   padding: 0;
@@ -279,7 +279,7 @@ h2 {
 }
 
 .expand {
-  width: 48px;
+  width: 26px;
   height: 16px;
   float: right;
   margin: 0;
@@ -318,7 +318,7 @@ h3.expansion {
   margin: 0;
   padding: 0;
   line-height: 12px;
-  font-family: "base-9-sans";
+  font-family: "base-9-sans", sans-serif;
   font-size: 40px;
   cursor: pointer;
 }
@@ -340,7 +340,7 @@ h3.expansion {
 }
 
 .infoparagraph {
-  font-family: "base-12-serif";
+  font-family: "base-12-serif", serif;
   font-size: 16px;
   line-height: 140%;
   padding: 0;
@@ -367,7 +367,7 @@ h3.expansion {
 }
 
 .captiontxt {
-  font-family: "base-9-sans";
+  font-family: "base-9-sans", sans-serif;
   font-size: 12px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -432,6 +432,11 @@ h3.expansion {
     padding-top: 0px;
   }
 
+  .caption {
+    width: 100%;
+  }
+
+
 }
 
 /*button*/
@@ -456,7 +461,7 @@ h3.expansion {
   display: block;
   width: 100%;
   padding: 24px 5% 60px 5%;
-  font-family: "base-9-sans";
+  font-family: "base-9-sans", sans-serif;
 }
 
 .trigrid>div {

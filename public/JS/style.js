@@ -72,6 +72,10 @@ $(".expand").click(function(){
   }
 });
 
+$(".iconhold").click(function(){
+  event.stopPropagation();
+});
+
 /*
 $(".invention").click(function(){
   event.stopPropagation();
