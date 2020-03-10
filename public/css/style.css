@@ -407,6 +407,26 @@ h3.expansion {
   width: 25px;
 }
 
+@media only screen and (max-width: 400px) {
+  .invention {
+    font-size: 1.6rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .strike {
+    font-size: 34px;
+  }
+
+  .name {
+    font-size: 34px;
+  }
+
+  h3.expansion {
+    font-size: 34px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
 
   .infoparagraph  {
