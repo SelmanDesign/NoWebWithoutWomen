@@ -309,6 +309,25 @@ h2 {
   letter-spacing: -0.05em;
 }
 
+.strikealt {
+  font-size: 40px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  letter-spacing: -0.05em;
+}
+
+.strikealt::after {
+  border-bottom: 0.125em solid black;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
 .strike::after {
   border-bottom: 0.125em solid black;
   content: "";

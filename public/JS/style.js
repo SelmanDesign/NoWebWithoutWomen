@@ -178,7 +178,9 @@ $(document).ready(function() {
     expandednav();
     $(".bodygrid").removeClass('noscroll');
     $(".bodygrid").removeClass('stickify');
-    $(".bodygrid").css("margin-top", wD);
+    setTimeout(function() {
+      $(".bodygrid").css("margin-top", hH);
+    }, 300);
   } else {
     smallnav();
   }
