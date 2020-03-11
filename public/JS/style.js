@@ -62,6 +62,7 @@ $(".expand").click(function(){
     par.toggleClass("inforightshow");
     fullspan.toggleClass("fullspan");
     wiki.toggleClass("incondisp");
+    scrollTop: $(ex).offset().top-1;
     setTimeout(function() {
       var hH = $('.navbar').outerHeight(),
           hHm = hH+10
@@ -120,7 +121,7 @@ $(".cardhold").click(function(){
   pic.toggleClass("inforightshow");
   fullspan.toggleClass("fullspan");
   wiki.toggleClass("incondisp");
-  smallnav();
+  scrollTop: $(ex).offset().top-1;
   setTimeout(function() {
     var hH = $('.navbar').outerHeight(),
         hHm = hH+10
@@ -138,9 +139,13 @@ $(".cardhold").click(function(){
 /*variable navbar functions*/
 
 function expandednav() {
+  var zip = $(window).scrollTop(),
+      wS = $(this).scrollTop(),
+      hH = $('.navbar').outerHeight(),
+      wD = (hH+wS);
   $('#item0').removeClass('animater');
   $('.headl').removeClass('small');
-  $('.heightcomp').css("height","80vh");
+  $('.heightcomp').css("height",hH);
   $('.defaulp').css("display","block");
   $('.headlinehold').addClass('headlinemargin');
   $('.headlinehold').css("margin-top","5vh");
@@ -153,9 +158,13 @@ function expandednav() {
 }
 
 function smallnav() {
+  var zip = $(window).scrollTop(),
+      wS = $(this).scrollTop(),
+      hH = $('.navbar').outerHeight(),
+      wD = (hH+wS);
   $('.headl').addClass('small');
   $('#item0').addClass('animater');
-  $('.bodygrid').css("margin-top","100px");
+  $('.bodygrid').css("margin-top",hH);
   $('.defaulp').css("display","none");
   $('.headlinehold').removeClass('headlinemargin');
   $('.headlinehold').css("margin-top","12px");
@@ -171,18 +180,18 @@ function smallnav() {
 
 $(document).ready(function() {
   var zip = $(window).scrollTop(),
-      wS =$(this).scrollTop(),
-      hH = $('.navbar').outerHeight(),
-      wD = (hH+wS);
+      wS =$(this).scrollTop();
   if (wS <= 1)  {
-    expandednav();
     $(".bodygrid").removeClass('noscroll');
     $(".bodygrid").removeClass('stickify');
     setTimeout(function() {
+      expandednav();
+      var hH = $('.navbar').outerHeight();
       $(".bodygrid").css("margin-top", hH);
-    }, 300);
+    }, 100);
   } else {
     smallnav();
+
   }
 });
 
@@ -192,22 +201,10 @@ $(window).scroll(function() {
       wS = $(this).scrollTop(),
       hH = $('.navbar').outerHeight(),
       wD = (hH+wS);
-  if (wS <= 1) {
-    expandednav();
-    $(".bodygrid").removeClass('noscroll');
-    $(".bodygrid").removeClass('stickify');
-    setTimeout(function() {
-      hHH = $('.navbar').outerHeight()
-      hHM = hHH;
-      $(".bodygrid").css("margin-top", hHM);
-      console.log(hHH);
-    }, 300);
-  } else {
     smallnav();
     $(".bodygrid").removeClass('noscroll');
     $(".bodygrid").addClass('stickify');
     $("footer").removeClass('scrollhide');
-  }
 });
 
 

@@ -29,6 +29,10 @@ a {
 }
 /*navbar*/
 
+.topl {
+  text-decoration: none;
+}
+
 .navbar {
   width: 100%;
   padding: 6px 5% 6px 5%;
@@ -49,7 +53,7 @@ a {
 }
 
 .headlinemargin {
-  margin-left: 17.5vw;
+  margin-left: 25%;
 }
 
 #nomarg {
@@ -285,11 +289,12 @@ h2 {
 }
 
 .expand {
-  width: 26px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   float: right;
-  margin: 0;
+  margin: auto;
   padding: 0;
+  margin-top: 6px;
   line-height: 0px;
   transition: 0.3s;
 }
@@ -342,7 +347,7 @@ h3.expansion {
   text-align: right;
   margin: 0;
   padding: 0;
-  line-height: 12px;
+  line-height: 30px;
   font-family: "base-9-sans", sans-serif;
   font-size: 40px;
   cursor: pointer;
@@ -444,6 +449,14 @@ h3.expansion {
   h3.expansion {
     font-size: 34px;
   }
+
+  .strikealt {
+    font-size: 34px;
+  }
+
+  .expand {
+    margin-top: 3px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -516,7 +529,7 @@ h3.expansion {
 }
 
 .trigrid>div {
-  padding-bottom: 36px;
+
 }
 
 .trigridchildhold {
@@ -541,8 +554,7 @@ h3.expansion {
 
   .trigrid {
     display: grid;
-    grid-template-columns: 46% 30% 24%;
-    grid-column-gap: 12px;
+    grid-template-columns: 26% 5% 26% 6% 20% 17%;
   }
 
   .social {
@@ -550,11 +562,14 @@ h3.expansion {
   }
 
   .trigridchildhold{
-    align-self: center;
   }
 
-  .social {
-    align-self: center;
+  .disclaim {
+    font-size: 12px;
+  }
+
+  .typeset {
+    max-width: 250px;
   }
 
 }
